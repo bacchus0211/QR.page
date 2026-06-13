@@ -21,16 +21,20 @@
     2. 下のコメントを外して MYCODE を自分のコードに
 -->
 
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C0EESJS7SP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C0EESJS7SP');
+</script>
+
 <script>
   const MODE = "hub";
   const REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJpft6iDGRGGARivgPD2R_WYk";
   if (MODE === "direct") { location.replace(REVIEW_URL); }
 </script>
-
-<!-- 計測タグ
-<script data-goatcounter="https://MYCODE.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
--->
 
 <link rel="stylesheet" href="https://use.typekit.net/yiz1rxr.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
