@@ -312,6 +312,11 @@
 
   <nav class="doors" aria-label="リンク">
 
+    <div class="door" style="cursor:pointer;" onclick="downloadImages()">
+      <span class="en">Gallery</span>
+      <span class="jp">今夜の画像を保存する ─ カクテル・ウイスキー・ビール</span>
+    </div>
+
     <a class="door primary"
        href="https://search.google.com/local/writereview?placeid=ChIJpft6iDGRGGARivgPD2R_WYk"
        onclick="gtag('event','button_click',{button_name:'口コミを書く',destination:'google_review'});">
@@ -354,5 +359,23 @@
   </footer>
 
 </main>
+<script>
+  function downloadImages() {
+    const images = [
+      { file: 'カクテル.png',   label: 'カクテル' },
+      { file: 'ウイスキー.png', label: 'ウイスキー' },
+      { file: 'ヒ_ール.png',    label: 'ビール' }
+    ];
+    images.forEach((img, i) => {
+      setTimeout(() => {
+        const a = document.createElement('a');
+        a.href = img.file;
+        a.download = img.file;
+        a.click();
+      }, i * 500);
+    });
+    gtag('event', 'button_click', { button_name: '画像ダウンロード', destination: 'gallery' });
+  }
+</script>
 </body>
 </html>
